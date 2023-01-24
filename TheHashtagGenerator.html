@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The hashtag generator</title>
+</head>
+<body>
+    <script>
+    
+        var string="Red car   yes ";
+
+        string=string.replace(/\s+/g, '');
+
+        if(string==""){
+            string=0;
+        }
+        
+        var string= "#" + string;
+
+        if(string.length>140){
+            string=0;;
+        }
+
+        if(string==0 || string=="#0"){
+            string=false;
+        }
+
+        console.log(string);
+
+
+    </script>
+
+    <!--
+        The marketing team is spending way too much time typing in hashtags.
+Let's help them with our own Hashtag Generator!
+
+Here's the deal:
+
+It must start with a hashtag (#).
+All words must have their first letter capitalized.
+If the final result is longer than 140 chars it must return false.
+If the input or the result is an empty string it must return false.
+Examples
+" Hello there thanks for trying my Kata"  =>  "#HelloThereThanksForTryingMyKata"
+"    Hello     World   "                  =>  "#HelloWorld"
+    -->
+</body>
+</html>
